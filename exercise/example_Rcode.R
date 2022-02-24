@@ -1,5 +1,5 @@
 
-#Exercise #1
+#Exercise #1 TEST
 
 #1. Clone the repository 'gitKraken_ex' in GitKraken. 
 #2. Find the folder on your local computer, and add a couple of small text files 
