@@ -1,67 +1,16 @@
-# An excercise in R
 
+#Exercise #1
 
-# Print Hello World
-myString <- "Hello, World!"
+#1. Clone the repository 'gitKraken_ex' in GitKraken. 
+#2. Find the folder on your local computer, and add a couple of small text files 
+#to it from your computer.
+#3. Create a new plain text file called data-file.txt, add a line or 2 
+#of content to it and save it to the gitKraken_ex folder.
+#4. Go to GitKraken, and commit the change with an approriate message.
 
-print (myString)
+#Exercise #2
 
-
-# Monte Carlo Pi
-montecarloPi <- function(trials) {
-  count = 0
-  for(i in 1:trials) {
-    if((runif(1,0,1)^2 + runif(1,0,1)^2) < 1) {
-      count = count + 1
-    }
-  }
-  return((count*4) / trials)
-}
-
-
-# Estimate Pi
-est.pi <- function(n){
-  
-  # drawing in  [0,1] x [0,1] covers one quarter of square and circle
-  # draw random numbers for the coordinates of the "dart-hits"
-  a <- runif(n,0,1)
-  b <- runif(n,0,1)
-  # use the pythagorean theorem
-  c <- sqrt((a^2) + (b^2) )
-  
-  inside <- sum(c<1)
-  #outside <- n-inside
-  
-  pi.est <- inside/n*4
-  
-  return(pi.est)
-}
-
-
-# Square function
-square_it <- function(x){
-  sq <- x*x
-  return(sq)
-}
-
-
-#Anscombe's quartet
-library(Tmisc)
-
-# Load the data and look at it
-data(quartet)
-str(quartet)
-
-# Compute simple statistics for each
-library(dplyr)
-quartet %>% 
-  group_by(set) %>% 
-  summarize(mean(x), sd(x), mean(y), sd(y), cor(x,y))
-
-# Visualize the data
-library(ggplot2)
-ggplot(quartet, aes(x, y)) + 
-  geom_point() + 
-  geom_smooth(method = lm, se = FALSE) + 
-  facet_wrap(~set)
-
+#.1 Push the changes to the "learning_github" repo (from the preivous exercise) 
+#to the remote repo on github.com
+# 2. Make changes to data-file.txt on GitHub.com
+#3. Sync or "Pull" the changes that were made remotely to the local repository
